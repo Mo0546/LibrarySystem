@@ -1,0 +1,5 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root {     -fx-background-image: url("../../drawable/79b1e3e0-f86a-4741-bc93-b64693048022.jpg");
+			-fx-background-repeat:no-repeat;
+			-fx-background-size:100% 100%;
+}

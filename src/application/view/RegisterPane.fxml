@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.RegisterController">
+   <children>
+      <AnchorPane layoutX="119.0" layoutY="120.0" prefHeight="424.0" prefWidth="423.0" style="-fx-background-color: white;">
+         <children>
+            <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="149.0" layoutY="60.0" prefHeight="200.0" prefWidth="250.0" spacing="25.0">
+               <children>
+                  <TextField fx:id="tf_name" promptText="姓名">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField id="tf_account" fx:id="tf_account" promptText="学号/学工号" />
+                  <PasswordField fx:id="tf_password" promptText="密码" />
+                  <PasswordField id="tf_passwordAgain" fx:id="tf_passwordAgain" promptText="再次确认密码" />
+                  <TextField fx:id="tf_phoneNumber" layoutX="45.0" layoutY="140.0" mouseTransparent="true" promptText="手机号码" />
+                  <HBox spacing="90.0">
+                     <children>
+                        <Button fx:id="btn_return" mnemonicParsing="false" onMouseClicked="#btn_returnClick" prefWidth="60.0" style="-fx-background-color: #81d4f4;" text="返回" textFill="#01121b" />
+                        <Button fx:id="btn_register" ellipsisString="" mnemonicParsing="false" onMouseClicked="#btn_registerClick" prefWidth="60.0" style="-fx-background-color: #81d4f4;" text="注册" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" layoutX="39.0" layoutY="99.0" prefHeight="200.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <RadioButton fx:id="rtn_reader" mnemonicParsing="false" text="读者">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rtn_libraryManager" mnemonicParsing="false" text="图书管理员" toggleGroup="$group" />
+                  <RadioButton fx:id="rtn_systemManager" mnemonicParsing="false" text="系统管理员" toggleGroup="$group" />
+               </children>
+               <padding>
+                  <Insets top="40.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
