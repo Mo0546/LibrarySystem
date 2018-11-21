@@ -1,0 +1,6 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root {     -fx-background-image: url("http://photo.static.api.vcg.com/creative/vcg/veer/612/veer-170941028.jpg");
+			-fx-background-repeat:no-repeat;
+			-fx-background-size:100% 100%;
+}
+.button{-fx-background-color:#81d4f4;}

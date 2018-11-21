@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>application.controller.SystemManagerController</OriginalElement>
+  <nodes>
+    <node x="3737.75" y="614.5">javafx.event.EventHandler</node>
+    <node x="974.5" y="1776.5">javafx.fxml.Initializable</node>
+    <node x="749.0" y="3454.0">application.model.Books</node>
+    <node x="2653.5" y="902.0">application.MainSystemManager</node>
+    <node x="3231.5" y="902.0">application.MainLibraryManager</node>
+    <node x="390.5" y="2628.5">application.controller.TestController</node>
+    <node x="1593.0" y="3454.0">application.model.Reader</node>
+    <node x="1848.5" y="2581.5">application.controller.ChangePasswordDialogController</node>
+    <node x="3897.159090909091" y="185.5">java.lang.FunctionalInterface</node>
+    <node x="3019.310606060606" y="452.0">javafx.application.Application</node>
+    <node x="1956.0" y="3454.0">application.dao.ReaderDao</node>
+    <node x="1122.5" y="2375.5">application.controller.SystemManagerController</node>
+    <node x="10.5" y="2076.0">application.controller.ReaderController</node>
+    <node x="2475.5" y="2594.0">javafx.scene.control.Alert.AlertType</node>
+    <node x="0.0" y="3454.0">application.controller.RegisterController</node>
+    <node x="2346.0" y="3454.0">application.dao.BooksDao</node>
+    <node x="2142.5" y="2593.5">application.util.MyDiolog</node>
+    <node x="2245.0" y="1614.0">javafx.scene.control.Alert</node>
+    <node x="2008.1250000000002" y="104.0">javafx.scene.control.Dialog</node>
+    <node x="2838.0" y="3454.0">application.util.JDBCUtil</node>
+    <node x="3377.0" y="3454.0">application.model.Security</node>
+    <node x="3030.5" y="914.0">application.Register</node>
+    <node x="3336.159090909091" y="0.0">javafx.event.Event</node>
+    <node x="951.2720588235294" y="0.0">javafx.event.EventTarget</node>
+    <node x="366.1470588235293" y="3355.0">application.controller.LibraryManagerController.TableRowControl</node>
+    <node x="3421.5" y="925.5">javafx.application.Application.Parameters</node>
+    <node x="2844.5" y="902.0">application.MainReader</node>
+    <node x="1197.0" y="3454.0">application.dao.InfoDao</node>
+    <node x="3655.5" y="891.0">application.Main</node>
+    <node x="3753.159090909091" y="185.5">java.util.EventListener</node>
+    <node x="315.0" y="3454.0">application.model.Info</node>
+    <node x="3171.0" y="3454.0">application.dao.JDBClink</node>
+    <node x="1952.0000000000002" y="1683.0">javafx.scene.control.TextInputDialog</node>
+    <node x="1555.5" y="2513.0">application.controller.LoginController</node>
+    <node x="683.5" y="2053.0">application.controller.LibraryManagerController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="application.controller.ChangePasswordDialogController" target="javafx.fxml.Initializable">
+      <point x="-68.49999999999977" y="-97.5" />
+      <point x="1917.0000000000002" y="2013.0" />
+      <point x="1224.75" y="2013.0" />
+      <point x="113.75" y="27.0" />
+    </edge>
+    <edge source="application.Main" target="javafx.event.EventHandler">
+      <point x="52.25" y="-96.5" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="application.MainSystemManager" target="javafx.application.Application">
+      <point x="0.0" y="-85.5" />
+      <point x="2739.0" y="861.0" />
+      <point x="3049.4772727272725" y="861.0" />
+      <point x="-150.83333333333348" y="189.5" />
+    </edge>
+    <edge source="javafx.application.Application.Parameters" target="javafx.application.Application">
+      <point x="0.0" y="-62.0" />
+      <point x="3528.5" y="861.0" />
+      <point x="3290.810606060606" y="861.0" />
+      <point x="90.5" y="189.5" />
+    </edge>
+    <edge source="javafx.event.EventHandler" target="javafx.event.Event">
+      <point x="-49.666666666666515" y="-27.0" />
+      <point x="3762.5833333333335" y="427.0" />
+      <point x="3534.659090909091" y="427.0" />
+      <point x="0.0" y="201.0" />
+    </edge>
+    <edge source="application.MainReader" target="javafx.application.Application">
+      <point x="0.0" y="-85.5" />
+      <point x="2927.5" y="871.0" />
+      <point x="3109.810606060606" y="871.0" />
+      <point x="-90.5" y="189.5" />
+    </edge>
+    <edge source="application.controller.SystemManagerController" target="javafx.fxml.Initializable">
+      <point x="0.0" y="-303.5" />
+      <point x="1329.0" y="2033.0" />
+      <point x="1133.75" y="2033.0" />
+      <point x="22.75" y="27.0" />
+    </edge>
+    <edge source="application.util.MyDiolog" target="javafx.scene.control.Alert">
+      <point x="0.0" y="-85.5" />
+      <point x="2299.0" y="2033.0" />
+      <point x="2332.75" y="2033.0" />
+      <point x="-87.75" y="189.5" />
+    </edge>
+    <edge source="application.controller.LibraryManagerController" target="javafx.fxml.Initializable">
+      <point x="0.0" y="-626.0" />
+      <point x="893.0" y="2033.0" />
+      <point x="1088.25" y="2033.0" />
+      <point x="-22.75" y="27.0" />
+    </edge>
+    <edge source="javafx.scene.control.TextInputDialog" target="javafx.scene.control.Dialog">
+      <point x="2.2737367544323206E-13" y="-120.5" />
+      <point x="2054.0000000000005" y="1589.0" />
+      <point x="2131.125" y="1589.0" />
+      <point x="-123.0" y="730.0" />
+    </edge>
+    <edge source="application.MainLibraryManager" target="javafx.application.Application">
+      <point x="0.0" y="-85.5" />
+      <point x="3316.5" y="871.0" />
+      <point x="3230.4772727272725" y="871.0" />
+      <point x="30.166666666666515" y="189.5" />
+    </edge>
+    <edge source="application.Main" target="javafx.application.Application">
+      <point x="-52.25" y="-96.5" />
+      <point x="3707.75" y="851.0" />
+      <point x="3351.1439393939395" y="851.0" />
+      <point x="150.83333333333348" y="189.5" />
+    </edge>
+    <edge source="application.controller.LibraryManagerController.TableRowControl" target="javafx.event.EventTarget">
+      <point x="-44.5" y="-27.0" />
+      <point x="410.6470588235293" y="3330.0" />
+      <point x="0.0" y="3330.0" />
+      <point x="0.0" y="79.0" />
+      <point x="1062.7720588235293" y="79.0" />
+      <point x="-111.5" y="27.0" />
+    </edge>
+    <edge source="javafx.event.EventHandler" target="java.lang.FunctionalInterface">
+      <point x="49.666666666666515" y="-27.0" />
+      <point x="3861.9166666666665" y="427.0" />
+      <point x="3975.659090909091" y="427.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="application.controller.ReaderController" target="javafx.fxml.Initializable">
+      <point x="0.0" y="-603.0" />
+      <point x="190.5" y="2013.0" />
+      <point x="997.25" y="2013.0" />
+      <point x="-113.75" y="27.0" />
+    </edge>
+    <edge source="javafx.event.EventHandler" target="java.util.EventListener">
+      <point x="0.0" y="-27.0" />
+      <point x="3812.25" y="427.0" />
+      <point x="3815.159090909091" y="427.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="application.controller.LibraryManagerController.TableRowControl" target="application.controller.LibraryManagerController">
+      <point x="44.5" y="-27.0" />
+      <point x="499.6470588235293" y="3330.0" />
+      <point x="893.0" y="3330.0" />
+      <point x="0.0" y="626.0" />
+    </edge>
+    <edge source="javafx.scene.control.Dialog" target="javafx.event.EventTarget">
+      <point x="0.0" y="-730.0" />
+      <point x="2254.125" y="79.0" />
+      <point x="1285.7720588235293" y="79.0" />
+      <point x="111.5" y="27.0" />
+    </edge>
+    <edge source="application.Register" target="javafx.application.Application">
+      <point x="0.0" y="-73.5" />
+      <point x="3121.0" y="871.0" />
+      <point x="3170.1439393939395" y="871.0" />
+      <point x="-30.166666666666515" y="189.5" />
+    </edge>
+    <edge source="javafx.scene.control.Alert.AlertType" target="javafx.scene.control.Alert">
+      <point x="0.0" y="-85.0" />
+      <point x="2542.0" y="2033.0" />
+      <point x="2508.25" y="2033.0" />
+      <point x="87.75" y="189.5" />
+    </edge>
+    <edge source="application.controller.TestController" target="javafx.fxml.Initializable">
+      <point x="0.0" y="-50.5" />
+      <point x="527.0" y="2023.0" />
+      <point x="1042.75" y="2023.0" />
+      <point x="-68.25" y="27.0" />
+    </edge>
+    <edge source="javafx.scene.control.Alert" target="javafx.scene.control.Dialog">
+      <point x="0.0" y="-189.5" />
+      <point x="2420.5" y="1589.0" />
+      <point x="2377.125" y="1589.0" />
+      <point x="123.0" y="730.0" />
+    </edge>
+    <edge source="application.controller.LoginController" target="javafx.fxml.Initializable">
+      <point x="0.0" y="-166.0" />
+      <point x="1692.0" y="2023.0" />
+      <point x="1179.25" y="2023.0" />
+      <point x="68.25" y="27.0" />
+    </edge>
+    <edge source="application.controller.ChangePasswordDialogController" target="javafx.scene.control.TextInputDialog">
+      <point x="68.50000000000023" y="-97.5" />
+      <point x="0.0" y="120.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.4700920245398773" x="638.3817292006526" y="1585.4176182707993" />
+  <SelectedNodes>
+    <node>application.controller.SystemManagerController</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

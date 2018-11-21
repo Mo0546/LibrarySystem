@@ -1,0 +1,8 @@
+startNetworkServer.bat
+connect 'jdbc:derby://localhost:1527/demoDB;create=true';
+disconnect;
+quit;
+stopNetworkServer.bat
+
+select * from info where account='201725040120'£»
+select * from info where returnDate IS NULL and account='201725040120'£»

@@ -24,7 +24,7 @@
                   <TextField id="tf_account" fx:id="tf_account" promptText="学号/学工号" />
                   <PasswordField fx:id="tf_password" promptText="密码" />
                   <PasswordField id="tf_passwordAgain" fx:id="tf_passwordAgain" promptText="再次确认密码" />
-                  <TextField fx:id="tf_phoneNumber" layoutX="45.0" layoutY="140.0" mouseTransparent="true" promptText="手机号码" />
+                  <TextField fx:id="tf_phoneNumber" layoutX="45.0" layoutY="140.0" mouseTransparent="false" promptText="手机号码" />
                   <HBox spacing="90.0">
                      <children>
                         <Button fx:id="btn_return" mnemonicParsing="false" onMouseClicked="#btn_returnClick" prefWidth="60.0" style="-fx-background-color: #81d4f4;" text="返回" textFill="#01121b" />

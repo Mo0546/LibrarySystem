@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -9,6 +9,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ReaderController">
    <children>
@@ -22,39 +23,41 @@
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="595.0" prefWidth="1272.0">
                                  <children>
-                                    <TableView prefHeight="583.0" prefWidth="1271.0">
+                                    <TableView fx:id="reader_tb_library" prefHeight="583.0" prefWidth="1271.0">
                                       <columns>
-                                        <TableColumn prefWidth="150.0" text="图书名称" />
-                                          <TableColumn prefWidth="150.0" text="图书编号" />
-                                          <TableColumn prefWidth="229.0" text="出版社" />
-                                          <TableColumn prefWidth="172.0" text="作者" />
-                                          <TableColumn prefWidth="75.0" text="馆藏数量" />
-                                          <TableColumn prefWidth="494.0" text="描述信息" />
+                                        <TableColumn fx:id="tc_name" prefWidth="150.0" text="图书名称" />
+                                          <TableColumn fx:id="tc_bookID" prefWidth="150.0" text="图书编号" />
+                                          <TableColumn fx:id="tc_type" prefWidth="75.0" text="图书类型" />
+                                          <TableColumn fx:id="tc_writer" prefWidth="172.0" text="作者" />
+                                          <TableColumn fx:id="tc_press" prefWidth="229.0" text="出版社" />
+                                          <TableColumn fx:id="tc_price" prefWidth="127.0" text="价格" />
+                                          <TableColumn fx:id="tc_isInLibrary" prefWidth="162.0" text="是否在馆" />
+                                          <TableColumn fx:id="tc_chooseItem" prefWidth="81.0" text="勾选" />
                                       </columns>
                                     </TableView>
                                  </children>
                               </AnchorPane>
                           </content>
                         </ScrollPane>
-                        <CheckBox layoutX="408.0" layoutY="617.0" mnemonicParsing="false" text="选择图书" />
-                        <Button layoutX="742.0" layoutY="611.0" mnemonicParsing="false" text="搜索" />
+                        <Button fx:id="btn_find" layoutX="742.0" layoutY="611.0" mnemonicParsing="false" onAction="#find" text="搜索" />
                         <TextField layoutX="543.0" layoutY="606.0" prefHeight="42.0" prefWidth="171.0" />
+                        <Button fx:id="btn_borrow" layoutX="898.0" layoutY="611.0" mnemonicParsing="false" style="-fx-background-color: #81d4f4;" text="借阅" textFill="#fcfcfc" />
                      </children></AnchorPane>
                </content>
             </Tab>
-          <Tab text="我的借阅">
+          <Tab fx:id="tab_myBorrow" onSelectionChanged="#tabClick" text="我的借阅">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutY="-6.0" prefHeight="673.0" prefWidth="1280.0">
+                        <TableView fx:id="reader_tb_myBorrow" prefHeight="673.0" prefWidth="1280.0">
                           <columns>
-                              <TableColumn prefWidth="214.0" text="图书名称" />
-                              <TableColumn prefWidth="214.0" text="作者" />
-                              <TableColumn prefWidth="214.0" text="出版社" />
-                              <TableColumn prefWidth="214.0" text="借阅时间" />
-                              <TableColumn prefWidth="214.0" text="还书时间" />
-                              <TableColumn prefWidth="115.0" text="是否超时" />
-                              <TableColumn prefWidth="93.0" text="续借" />
+                              <TableColumn fx:id="tc_borrowBookName" prefWidth="214.0" text="图书名称" />
+                              <TableColumn fx:id="tc_borrow_time" prefWidth="214.0" text="借阅时间" />
+                              <TableColumn fx:id="tc_return_time" prefWidth="200.0" text="还书时间" />
+                              <TableColumn fx:id="tc_shouldReturn_time" prefWidth="139.0" text="应还日期" />
+                              <TableColumn fx:id="tc_borrow_renewTimes" prefWidth="104.0" text="续借次数" />
+                              <TableColumn fx:id="tc_borrow_renew" prefWidth="101.0" text="续借" />
+                              <TableColumn fx:id="tc_returnBook" prefWidth="75.0" text="还书" />
                           </columns>
                         </TableView>
                      </children></AnchorPane>
@@ -63,8 +66,35 @@
             <Tab text="个人信息">
               <content>
                 <AnchorPane fx:id="reader_information" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                	<fx:include fx:id="pane" source="informationPane.fxml" />
-                </AnchorPane>
+                     <children>
+                        <Label layoutX="425.0" layoutY="112.0" prefHeight="41.0" prefWidth="62.0" text="姓名">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tf_readerName" editable="false" layoutX="573.0" layoutY="113.0" prefHeight="38.0" prefWidth="202.0" />
+                        <TextField fx:id="tf_readerId" editable="false" layoutX="573.0" layoutY="241.0" prefHeight="38.0" prefWidth="202.0" />
+                        <TextField fx:id="tf_readerPhone" editable="false" layoutX="573.0" layoutY="372.0" prefHeight="38.0" prefWidth="202.0" />
+                        <Label layoutX="425.0" layoutY="240.0" prefHeight="41.0" prefWidth="62.0" text="学号">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="425.0" layoutY="371.0" prefHeight="41.0" prefWidth="95.0" text="联系方式">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_changInfo" layoutX="425.0" layoutY="490.0" mnemonicParsing="false" onAction="#doclick" prefHeight="30.0" prefWidth="95.0" text="修改信息" />
+                        <Button fx:id="btn_confirmChange" layoutX="598.0" layoutY="490.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" text="确认修改" />
+                        <Button fx:id="btn_changPassword" layoutX="757.0" layoutY="490.0" mnemonicParsing="false" onAction="#changePassword" text="修改密码" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="关于">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  <fx:include source="About.fxml" />
               </content>
             </Tab>
         </tabs>

@@ -4,11 +4,15 @@ import java.io.IOException;
 
 import application.controller.LoginController;
 import application.controller.RegisterController;
+import application.util.JDBCUtil;
+import application.util.MyDiolog;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -26,12 +30,9 @@ public final class Main  extends Application implements EventHandler<ActionEvent
 	 */
 	 
 	private static Stage primaryStage;
-	//private Stage registerStage;
-	//private BorderPane loginPane;
-	//private BorderPane registerPane;
+
 	FXMLLoader loader;
 	public static void main(String[] args) throws Exception {
-		
 		launch(args);
 	}
 	@Override
@@ -41,16 +42,20 @@ public final class Main  extends Application implements EventHandler<ActionEvent
 		primaryStage.setTitle("图书管理系统");
 		loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("view/MainPane.fxml"));
-		//Parent parent = loader.getController();
-		//TextField account = (TextField)parent.lookup("#account");
-		//PasswordField password = (PasswordField)parent.lookup("#password");
-		//commitUIData(account,password);//传递参数
 		BorderPane loginPane = (BorderPane)loader.load();
 		Scene scene = new Scene(loginPane,1280,720);
 		scene.getStylesheets().add(getClass().getResource("view/login.css").toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.show();
-		//btn_register.setOnAction(this);
+		if (JDBCUtil.createDB()!=0){
+		Platform.runLater(new Runnable() {
+			@Override
+			public void run() {
+				MyDiolog myDiolog =new MyDiolog(Alert.AlertType.CONFIRMATION,"第一次使用系统，初始化数据库");
+				myDiolog.mshow();
+			}
+		});
+		}
 	}
 	
 	//get舞台                                        

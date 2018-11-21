@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="#f8a8c0" layoutX="483.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="制作者" wrappingWidth="201.0">
+         <font>
+            <Font name="FZShuTi" size="39.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Text>
+      <ImageView fitHeight="50.0" fitWidth="28.0" layoutX="421.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+          <Image url="/drawable/candy.png" />
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="28.0" layoutX="421.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/drawable/candy.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="28.0" layoutX="421.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/drawable/candy.png" />
+         </image>
+      </ImageView>
+      <Text fill="#f8a8c0" layoutX="483.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="制作理念" wrappingWidth="201.0">
+         <font>
+            <Font name="FZShuTi" size="39.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Text>
+      <Text fill="#f8a8c0" layoutX="483.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="制作目的" wrappingWidth="201.0">
+         <font>
+            <Font name="FZShuTi" size="39.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Text>
+      <Text layoutX="483.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="刘照赫、黄玉香、戴均娣" wrappingWidth="386.30029296875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="483.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="通俗、简洁、大方、美观" wrappingWidth="386.30029296875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="491.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="让图书馆为学生、学校服务，统一系统联系起来" wrappingWidth="386.30029296875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LibraryManagerController">
+   <children>
+      <TabPane prefHeight="727.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="200.0">
+        <tabs>
+          <Tab text="图书管理">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutY="75.0" prefHeight="605.0" prefWidth="1280.0">
+                          <content>
+                            <AnchorPane layoutY="75.0" minHeight="0.0" minWidth="0.0" prefHeight="588.0" prefWidth="1280.0">
+                                 <children>
+                                    <TableView prefHeight="591.0" prefWidth="1280.0">
+                                      <columns>
+                                        <TableColumn prefWidth="75.0" text="序号" />
+                                        <TableColumn prefWidth="151.0" text="图书编号" />
+                                          <TableColumn prefWidth="167.0" text="图书名称" />
+                                          <TableColumn prefWidth="132.0" text="出版社" />
+                                          <TableColumn prefWidth="503.0" text="描述信息" />
+                                          <TableColumn prefWidth="182.0" text="更新时间" />
+                                          <TableColumn prefWidth="51.0" text="选择" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                        <TextField layoutX="402.0" layoutY="26.0" prefColumnCount="10" prefHeight="40.0" prefWidth="220.0" promptText="搜索图书" />
+                        <Button layoutX="654.0" layoutY="31.0" mnemonicParsing="false" text="搜索" />
+                        <Button layoutX="1085.0" layoutY="31.0" mnemonicParsing="false" text="添加图书" />
+                        <Button layoutX="1191.0" layoutY="31.0" mnemonicParsing="false" text="删除" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="图书信息维护">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField layoutX="402.0" layoutY="26.0" prefHeight="40.0" prefWidth="220.0" promptText="搜索" />
+                        <Button layoutX="654.0" layoutY="31.0" mnemonicParsing="false" text="搜索" />
+                        <Button layoutX="1180.0" layoutY="31.0" mnemonicParsing="false" text="修改" />
+                        <ScrollPane layoutY="80.0" prefHeight="607.0" prefWidth="1280.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="613.0" prefWidth="1281.0">
+                                 <children>
+                                    <TableView prefHeight="601.0" prefWidth="1280.0">
+                                      <columns>
+                                        <TableColumn prefWidth="96.0" text="序号" />
+                                        <TableColumn prefWidth="258.0" text="图书编号" />
+                                          <TableColumn prefWidth="382.0" text="图书名称" />
+                                          <TableColumn prefWidth="448.0" text="借阅者学号" />
+                                          <TableColumn prefWidth="95.0" text="选择" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="读者信息维护">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="681.0" prefWidth="1126.0">
+                     <children>
+                        <TextField layoutX="402.0" layoutY="26.0" prefHeight="40.0" prefWidth="220.0" promptText="搜索" />
+                        <Button layoutX="654.0" layoutY="31.0" mnemonicParsing="false" text="搜索" />
+                        <ScrollPane layoutY="80.0" prefHeight="603.0" prefWidth="1280.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="603.0" prefWidth="1277.0">
+                                 <children>
+                                    <TableView layoutY="-5.0" prefHeight="612.0" prefWidth="1280.0">
+                                      <columns>
+                                        <TableColumn prefWidth="75.0" text="序号" />
+                                        <TableColumn prefWidth="153.0" text="学号" />
+                                          <TableColumn prefWidth="152.0" text="姓名" />
+                                          <TableColumn prefWidth="216.0" text="借阅图书" />
+                                          <TableColumn prefWidth="149.0" text="图书编号" />
+                                          <TableColumn prefWidth="178.0" text="借阅日期" />
+                                          <TableColumn prefWidth="166.0" text="还书日期" />
+                                          <TableColumn prefWidth="118.0" text="续借次数" />
+                                          <TableColumn prefWidth="71.0" text="续借" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="个人信息">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
